@@ -1,0 +1,759 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #9480B0;
+    
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr repeat(3, 1fr) auto;
+    height: 100%;
+    width: 90%;
+    margin-left: 60px;
+    grid-gap: 40px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    border-radius: 25px;
+    border-bottom: #2b124c solid;
+    margin-top: 5%;
+
+}
+
+#logo {
+    width: 110px;
+    height: 110px;
+}
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar li {
+    margin: 0 5px;
+}
+
+.branch_icon {
+    scale: 0.5;
+    padding: 40px;
+    margin: 0;
+    width: 160px;
+    height: 64px;
+    size: 30px;
+    
+   
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: #2b124c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar li a:hover {
+    background-color: #395a8e65;
+    border-radius: 15px;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    border: solid;
+    border-radius: 20px;
+}
+
+.contant {
+    position: relative;
+    z-index: 1;
+    color: #AC7BA6;
+    text-align: center;
+    padding: 60px;
+}
+
+/* Blur effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+h1, h2 {
+    color: #2b124c;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+hr {
+    margin-top: 25px;
+}
+
+.contant p {
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 10px;
+}
+
+span {
+    color: #395A8E;
+    font-size: 40px;
+}
+
+.email-button {
+    color: #2b124c;
+    background-color: #2b124c41;
+    padding: 10px 20px;
+    border: #2b124c52 solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.email-button {
+    text-decoration: none;
+    color: #2b124c;
+}
+
+.email-button:hover {
+    background-color: #395A8E;
+    transform: scale(1.1);
+}
+
+.social_icon:hover {
+    transform: translateY(-10px);
+}
+
+/* Services Section */
+.services-section {
+    width: auto;
+    margin: 150px auto;
+    padding-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    border-top: #2b124c solid;
+    display: flex; /* استخدام الفلكس */
+    flex-wrap: wrap;
+
+}
+
+.services-section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #233759;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.76); 
+    transition: transform 0.3s ease;
+    flex: 1 1 250px;}
+   
+    
+        
+
+.glassmorphism-card:hover {
+    transform: translateY(-10px);
+}
+
+.glassmorphism-card h2 {
+    font-size: 24px;
+    color: #395A8E;
+    margin-bottom: 10px;
+}
+
+.glassmorphism-card p {
+    font-size: 16px;
+    color: #233759;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+/* --------------------service section done-------- */
+
+/* ------------Responsive Styles ------------------*/
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        margin-top: 30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .hero h4 {
+        font-size: 16px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-rows: auto 1fr auto;
+        margin-left: 20px;
+        grid-gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: auto;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .hero h4 {
+        font-size: 14px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .container {
+        grid-template-rows: auto 1fr auto;
+        margin-left: 10px;
+    }
+
+    .navbar li {
+        margin: 0 2px;
+    }
+
+    .email-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .glassmorphism-card {
+        padding: 15px;
+    }
+
+    .social_icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+/* ------------------------- */
+/* ---------skill srction----- */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+    border-top: 3px solid;
+
+
+}
+
+.skills-title {
+    padding: 30px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #233759;
+}
+
+.skills-description {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #395A8E;
+    max-width: 600px; /* Adjust the width of the description */
+    font-weight: bold;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    position: relative;
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px; /* Slight margin between cards */
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card img {
+    width: 80%; /* Adjust to fit nicely within the card */
+    height: auto; /* Keep the aspect ratio */
+    object-fit: cover;
+}
+
+.skill-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px; /* Reduced padding */
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.skill-card:hover .skill-content {
+    transform: translateY(0);
+}
+
+.skill-name {
+    font-size: 20px; /* Adjusted for better fit */
+    font-weight: bold;
+    color: #395A8E;
+}
+
+.skill-description {
+    font-size: 14px; /* Adjusted for better fit */
+    color: #233759;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .skill-card {
+        width: 90%; /* Full width on smaller screens */
+        height: auto; /* Adjust height to auto */
+    }
+
+    .skill-card img {
+        width: 100%; /* Full width for images on small screens */
+    }
+}
+/* ---------TOOLSSSSS SECTION */
+.tools-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15%;
+    border-top: 3px solid;
+}
+
+.tools-title {
+    padding: 30px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #233759;
+}
+
+.tools-description {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #395A8E;
+    max-width: 600px;
+    font-weight: bold;
+}
+
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tool-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-card img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tool-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.tool-card:hover .tool-content {
+    transform: translateY(0);
+}
+
+.tool-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #395A8E;
+}
+
+.tool-description {
+    font-size: 14px;
+    color: #233759;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .tool-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .tool-card img {
+        width: 100%;
+    }
+}
+/* -----------------------projects sec.-------------------------------- */
+#projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 10%;
+    border-top: solid #233759;
+    border-bottom: solid #233759;
+
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #233759;
+}
+
+
+
+
+.colorful-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    animation: colorChange 3s infinite; /* اسم الأنيميشن ومدته */
+}
+
+@keyframes colorChange {
+    0% {
+        color: #add8e6; /* أزرق فاتح */
+    }
+    25% {
+        color: #ffffff; /* أبيض */
+    }
+    50% {
+        color: #87cefa; /* أزرق فاتح آخر */
+    }
+    75% {
+        color: #ffffff; /* أبيض */
+    }
+    100% {
+        color: #add8e6; /* أزرق فاتح */
+    }}
+
+
+.project {
+    background-color: #ffffffce;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.project h2 {
+    font-size: 32px;
+    color: #395A8E;
+    margin-bottom: 15px;
+
+}
+
+.project p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #395A8E;
+    margin: 10px;
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-images img {
+    width: 100%; /* لضبط العرض على حجم الحاوية */
+    height: 200px; /* ارتفاع ثابت */
+    object-fit: cover; /* لضبط الصورة بما يتناسب مع الإطار دون تشويه */
+    border-radius: 8px;
+    opacity: 60%;
+    border: #395A8E solid;
+
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .project h2 {
+        font-size: 1.5rem;
+    }
+
+    .project p {
+        font-size: 1rem;
+    }
+}
+/* -------------project sec is done----------- */
+/* -----------------testimoooooooooniaaaaaaals----------- */
+.testimonials {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    backdrop-filter: blur(10px); /* تأثير البلور */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 30px 50px 50px rgba(35, 55, 89, 0.5); /* زيادة الظل ولون جديد */
+    margin-top: 15%;
+    border: solid #233759;
+}
+
+.testimonials-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #233759;
+    margin-bottom: 20px;
+}
+
+.testimonials-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #395A8E;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.8); /* لون خلفية التعليقات */
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15); /* زيادة الظل */
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease; /* إضافة تأثير الترانزيشن */
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05); /* تكبير الكارد عند التحويم */
+}
+
+.testimonial-card blockquote {
+    font-style: italic; /* الخط مائل */
+    margin: 0; /* إزالة الهامش */
+    padding: 0; /* إزالة الحشو */
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    color: #395A8E;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 1rem;
+    color: #233759;
+    text-align: right;
+}
+/* -----------------testimonial is done------------------- */
+/* -------------------------Highlited sec--------------------------------- */
+#highlights {
+    max-width: 1200px;
+    margin: 17% auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color:  #395A8E;
+}
+
+.highlights-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.highlight {
+    flex: 1 1 calc(30% - 20px); /* عرض الكارد */
+    margin: 10px;
+    padding: 15px;
+    border-left: 5px solid #AC7BA6;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+.highlight:hover {
+    background-color: #ccc;
+}
+
+.highlight h2 {
+    font-size: 1.5rem;
+    color: #AC7BA6;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1rem;
+    color: #395A8E;
+}
+/* -----------------------aboutme--------- */
+#about-me {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(57, 90, 142, 0.148);
+    border-radius: 8px;
+    box-shadow: 0 14px 20px #AC7BA6;
+    border: #d0ccd5 dashed;
+}
+
+#about-me h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color:   #395A8E;
+    
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+#about-me ul {
+    list-style-type: none; /* إزالة النقاط */
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+#about-me li {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* حجم الخط */
+}
+
+#about-me i {
+    margin-right: 10px; /* مسافة بين الأيقونة والنص */
+    color: #AC7BA6; /* لون الأيقونة */
+}
+
+/* ------------------------------------------FOOOTEEEER ---------------------*/
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #233759; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
